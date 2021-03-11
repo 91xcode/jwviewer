@@ -1,0 +1,59 @@
+bookmark-metadata
+db:bookmarks_mapping
+
+#db:metadatas
+metadata/getInfo/:metadataId
+
+#db:tags_mapping
+metadataId,tagId
+
+
+https://fucklo.li/api/video/getList/metadataid=81430
+DB:metadata(1)---(n)video
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[登录]
+https://fucklo.li/api/auth/login
+{username:"",password:""}
+res:{"code":0,"msg":"Success","data":{"token":"drbV8AdMq3apE6cmJdFsQgG2kdBt8bsX"}}
+
+[登录验正]
+https://fucklo.li/api/auth/check
+result
+{"code":0,"msg":"Success","data":{"isLogin":true,"permission":{"id":2,"name":"Premium Group","rule":{"admin":false,"title":"Premium","banned":false,"invitationNum":2,"invitationGroup":4},"createTime":"1595493164830","updateTime":"1595518221023"}}}
+
+
+[获取所有star]
+https://fucklo.li/api/metadata/getMetaList/star/1/50
+-----------------------------------------------/pageno/pagesize
+
+[获取star的信息]
+https://fucklo.li/api/metadata/getListByMeta/star/1296/1/21
+-------------------------------------------------/starid/pageno/pagesize
+result:
+{"code": 0,"msg": "Success","data": {}}
+data:
+{
+	total:xxx,
+	data:[],
+	metainfo:{
+		"id": 1296,
+		"name": "三浦恵理子",
+		"photoURL": "https://repl.fucklo.li/https://pics.javbus.com/actress/8ea_a.jpg",
+		"updateTime": "1595502121044"
+	}
+}
+
