@@ -40,13 +40,13 @@ public class VideoMapDao extends BaseDaoImpl<VideoMap, String> implements IVideo
 	}
 
 	public static void main(String[] args) {
-
-//		wupdateVideoMapByStarId(437);
-		updateVideoMapByStarId(437);
+		int id=3710;
+		wupdateVideoMapByStarId(id);
+		updateVideoMapByStarId(id);
 	}
 
 	public static void wupdateVideoMapByStarId(int starId) {
-		List<Metadata> list = HTTP.wGetMetadataByStarId(437);
+		List<Metadata> list = HTTP.wGetMetadataByStarId(starId);
 		Dao<Metadata, String> metadataDao = SQLite.getDao(Metadata.class);
 		try {
 		for (Metadata metadata : list) {

@@ -56,6 +56,7 @@ public class FavoriteDao extends BaseDaoImpl<Favorite, String> implements IFavor
 //		updateTag();
 		
 		//video
+
 		List<Favorite> favoriteStar = getFavoriteStar();
 		for (Favorite favorite : favoriteStar) {
 			int starId = favorite.getTypeId();
